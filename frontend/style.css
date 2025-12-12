@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f1f1f1;
+}
+
+.screen { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.hidden { display: none !important; }
+
+.login-box {
+    background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px #0003;
+    text-align: center;
+}
+.login-box input {
+    width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #bbb;
+}
+.login-box button { width: 100%; padding: 10px; margin-top: 10px; background: #0066cc; color: white; border: none; border-radius: 5px; }
+
+#app-screen { display: flex; height: 100vh; width: 100%; }
+
+.sidebar {
+    width: 220px; background: #003366; color: white; padding: 15px; display: flex; flex-direction: column; gap: 10px;
+}
+.sidebar button {
+    background: #0055aa; border: none; color: white; padding: 10px; border-radius: 5px;
+}
+.sidebar h2 { margin-bottom: 20px; }
+
+.main { flex: 1; padding: 20px; overflow-y: auto; }
+.page h1 { margin-bottom: 20px; }
+
+.ticket {
+    background: white; border-radius: 6px; padding: 10px; margin: 10px 0; box-shadow: 0 0 5px #0002;
+}

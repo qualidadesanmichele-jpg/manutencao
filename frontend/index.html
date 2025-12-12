@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Hospital San Michele - Sistema de Chamados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen" class="screen">
+    <div class="login-box">
+        <h1>Hospital San Michele</h1>
+        <h2>Sistema de Chamados</h2>
+        <input type="text" id="login-username" placeholder="Usuário">
+        <input type="password" id="login-password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="login-error"></p>
+    </div>
+</div>
+
+<div id="app-screen" class="hidden screen">
+    <div class="sidebar">
+        <h2 id="user-name"></h2>
+        <button onclick="showPage('dashboard')">Dashboard</button>
+        <button onclick="showPage('create-ticket')">Criar Chamado</button>
+        <button onclick="showPage('my-tickets')">Meus Chamados</button>
+        <button onclick="showPage('tech-tickets')" id="tech-menu" class="hidden">Atendimentos</button>
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <div class="main">
+        <div id="dashboard" class="page hidden">
+            <h1>Dashboard</h1>
+            <div id="dashboard-content"></div>
+        </div>
+
+        <div id="create-ticket" class="page hidden">
+            <h1>Criar Chamado</h1>
+            <input type="text" id="ticket-title" placeholder="Título">
+            <textarea id="ticket-desc" placeholder="Descreva o problema"></textarea>
+            <button onclick="createTicket()">Abrir Chamado</button>
+            <p id="ticket-error"></p>
+        </div>
+
+        <div id="my-tickets" class="page hidden">
+            <h1>Meus Chamados</h1>
+            <div id="my-tickets-list"></div>
+        </div>
+
+        <div id="tech-tickets" class="page hidden">
+            <h1>Chamados para Técnicos</h1>
+            <div id="tech-tickets-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
